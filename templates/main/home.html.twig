@@ -1,13 +1,4 @@
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Accueil</title>
-</head>
-<body>
+{% extends 'base.html.twig' %}
 
-</body>
-</html>
+{% block title %}{{ parent() }}| Accueil{% endblock %}
+{% block body %}<h1>Bienvenue sur le site de Bucket - List  </h1>{% endblock %}
