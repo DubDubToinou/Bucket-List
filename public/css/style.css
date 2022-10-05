@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     display: flex;
@@ -43,6 +48,7 @@ header nav a:hover {
 
 .header-nav {
     display: flex;
+    gap: 10px;
 }
 
 main {
@@ -55,4 +61,91 @@ footer {
     padding: 2rem 0;
     text-align: center;
     background-color: #EDDCD2;
+}
+
+.equipe article {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+}
+
+.equipe article img {
+    width: 210px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #502929;
+
+}
+
+input, textarea {
+    box-sizing: border-box;
+    width: 50%; margin-bottom: 1rem;
+}
+
+form{
+    width: 650px;
+
+}
+
+form div{
+    margin-bottom: 15px;
+}
+
+form button{
+    border-radius: 10px;
+    border: solid #5d4242 1px;
+    background-color: blanchedalmond;
+    margin-top: 10px;
+}
+
+form button:hover{
+    border-radius: 10px;
+    border: solid blanchedalmond 1px;
+    background-color: #5d4242;
+    margin-top: 10px;
+    color: white;
+}
+
+button {
+    padding: 0.5rem 0.7rem;
+    font-family: inherit;
+}
+
+.flash{
+    padding: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 5px 0 ;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.flash-success{
+    background-color: #588c58;
+    color: white;
+}
+
+@media screen and (min-width: 680px) {
+    .equipe article {
+        flex-direction: row;
+    }
+
+    .equipe article:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+
+    .equipe article img {
+        margin-right: 20px;
+    }
+
+    .equipe article:nth-child(odd) img {
+        margin-right: 0;
+        margin-left: 20px;
+    }
 }

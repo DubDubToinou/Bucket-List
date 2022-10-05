@@ -1,0 +1,26 @@
+[
+  {
+    "firstname": "Antoine",
+    "lastname": "DUBUC",
+    "dateOfBirth": "1991-04-05",
+    "creatorOf": "Symfony",
+    "picture": "https://i.ibb.co/gzGtRd9/1646032604758.jpg",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, cumque facilis harum id ipsam necessitatibus veniam! Adipisci alias delectus harum impedit ipsum, iste laboriosam natus possimus provident ratione velit voluptatibus? "
+  },
+  {
+    "firstname": "François",
+    "lastname": "Farlan",
+    "dateOfBirth": "1990-10-15",
+    "creatorOf": "Laravel",
+    "picture": "https://i.ibb.co/vjsZXCr/1659881865805.jpg",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, cumque facilis harum id ipsam necessitatibus veniam! Adipisci alias delectus harum impedit ipsum, iste laboriosam natus possimus provident ratione velit voluptatibus? "
+  },
+  {
+    "firstname": "Remy",
+    "lastname": "Mornet",
+    "dateOfBirth": "1993-10-03",
+    "creatorOf": "Composer",
+    "picture": "https://i.ibb.co/pbpcbq4/1663141402288.jpg",
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, cumque facilis harum id ipsam necessitatibus veniam! Adipisci alias delectus harum impedit ipsum, iste laboriosam natus possimus provident ratione velit voluptatibus? "
+  }
+]

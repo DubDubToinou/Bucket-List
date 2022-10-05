@@ -23,12 +23,24 @@
         </h1>
         <nav class="header-nav">
             <a href="{{ path('main_home') }}" title="retour Accueil">Accueil</a>
+            <a href="{{ path('wish_list') }}" title="Liste des souhaits">Ma liste de souhaits</a>
+            <a href="{{ path('wish_ajout') }}" title="Ajouter un souhait">Ajouter un souhait</a>
+            <a href="{{ path('main_aboutus') }}" title="About Us">A propos</a>
         </nav>
     </div>
 </header>
 
+
+
 <main>
     <div class="container">
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="flash flash-{{ label }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
         {% block body %}{% endblock %}
     </div>
 </main>
