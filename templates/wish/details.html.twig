@@ -1,13 +1,17 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-  {{ souhait.title }} | {{ parent() }}
+    {{ souhait.title }} | {{ parent() }}
 {% endblock %}
 
 {% block body %}
-        <h1>{{ souhait.title }}</h1>
-        <h5>{{ souhait.author }} le : {{ souhait.dateCreated|date('d/m/Y') }}</h5>
-        <p>{{ souhait.description }}</p>
+    <div class="detailsSouhaits">
+        <h1>{{ souhait.title }} </h1>
+        <h4 class="detailsCategorie">Catégorie : {{ souhait.categorie.name }}</h4>
+        <h5 class="detailsAuteur">{{ souhait.author }} le : {{ souhait.dateCreated|date('d/m/Y') }}</h5>
+        <p class="detailsDescription">{{ souhait.description }}</p>
+
+    </div>
 {% endblock %}
 
 
