@@ -26,7 +26,6 @@ class Wish
     private $title;
 
     /**
-     *
      * @Assert\Length(min="10", minMessage="Si vous mettez une description, elle doit au moins faire 10 caractères", max="200", maxMessage="la description est trop longue, max (200)")
      * @ORM\Column(type="text", nullable=true)
      */
@@ -49,7 +48,6 @@ class Wish
      */
     private $categorie;
 
-
     /**
      * @return mixed
      */
@@ -57,7 +55,6 @@ class Wish
     {
         return $this->id;
     }
-
 
     public function getTitle(): ?string
     {
@@ -130,5 +127,4 @@ class Wish
 
         return $this;
     }
-
 }

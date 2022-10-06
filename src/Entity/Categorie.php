@@ -29,7 +29,6 @@ class Categorie
      */
     private $Wish;
 
-
     public function __construct()
     {
         $this->Wish = new ArrayCollection();
@@ -81,5 +80,4 @@ class Categorie
 
         return $this;
     }
-
 }
