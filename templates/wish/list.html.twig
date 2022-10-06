@@ -11,7 +11,7 @@
         <div class="listeSouhaits">
             <ul>
                 <li><a href="{{ path('wish_details', {'id': souhait.id}) }}"
-                   title="Details du Souhait">{{ souhait.title }}</a></li>
+                   title="Details du Souhait">{{ souhait.title }} | [ {{ souhait.categorie.name }} ]</a></li>
             </ul>
         </div>
 

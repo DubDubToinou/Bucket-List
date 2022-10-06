@@ -36,6 +36,10 @@ class WishController extends AbstractController
 
         $souhait = $wishRepository->find($id);
 
+        if (!$souhait){
+            throw $this->createNotFoundException('Il n\'y a pas de souhait ici :) ');
+        }
+
         return $this->render('wish/details.html.twig', [
             "souhait" => $souhait
         ]);

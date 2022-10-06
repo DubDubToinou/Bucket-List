@@ -22,6 +22,7 @@ class WishRepository extends ServiceEntityRepository
     }
 
     public function add(Wish $entity, bool $flush = false): void
+
     {
         $this->getEntityManager()->persist($entity);
 

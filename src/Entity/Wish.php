@@ -40,11 +40,6 @@ class Wish
     private $author;
 
     /**
-     * @ORM\Column(type="boolean")
-     */
-    private $isPublished;
-
-    /**
      * @ORM\Column(type="datetime")
      */
     private $dateCreated;
@@ -53,6 +48,15 @@ class Wish
      * @ORM\ManyToOne(targetEntity=Categorie::class, inversedBy="Wish")
      */
     private $categorie;
+
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
 
     public function getTitle(): ?string
