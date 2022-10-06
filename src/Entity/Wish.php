@@ -49,10 +49,11 @@ class Wish
      */
     private $dateCreated;
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+    /**
+     * @ORM\ManyToOne(targetEntity=Categorie::class, inversedBy="Wish")
+     */
+    private $categorie;
+
 
     public function getTitle(): ?string
     {
@@ -113,4 +114,17 @@ class Wish
 
         return $this;
     }
+
+    public function getCategorie(): ?Categorie
+    {
+        return $this->categorie;
+    }
+
+    public function setCategorie(?Categorie $categorie): self
+    {
+        $this->categorie = $categorie;
+
+        return $this;
+    }
+
 }

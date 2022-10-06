@@ -8,8 +8,11 @@
     <h1>Ma liste de souhaits</h1>
 
     {% for souhait in souhaits %}
-        <div>
-            <h3><a href="{{ path('wish_details', {'id': souhait.id}) }}" title="Details du Souhait">{{ souhait.title }}</a> </h3>
+        <div class="listeSouhaits">
+            <ul>
+                <li><a href="{{ path('wish_details', {'id': souhait.id}) }}"
+                   title="Details du Souhait">{{ souhait.title }}</a></li>
+            </ul>
         </div>
 
     {% endfor %}

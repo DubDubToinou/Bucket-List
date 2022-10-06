@@ -131,6 +131,15 @@ button {
     color: white;
 }
 
+.listeSouhaits a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.listeSouhaits a:hover{
+    font-weight: bold;
+}
+
 @media screen and (min-width: 680px) {
     .equipe article {
         flex-direction: row;
