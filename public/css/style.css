@@ -141,6 +141,17 @@ button {
     font-weight: bold;
 }
 
+.userClass{
+    display: flex;
+    align-items: center;
+}
+.userClass img
+{
+    border-radius: 20px;
+    margin-right: 3px;
+    width: 50px;
+}
+
 @media screen and (min-width: 680px) {
     .equipe article {
         flex-direction: row;
