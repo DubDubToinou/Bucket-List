@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Wish;
 use App\Form\WishType;
 use App\Repository\WishRepository;
+use App\Util\Censurator;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -45,9 +46,9 @@ class WishController extends AbstractController
     }
 
     /**
-     * @Route("/AjouterSerie", name="ajout")
+     * @Route("/user/AjouterSerie", name="ajout")
      */
-    public function ajout(EntityManagerInterface $entityManager, Request $request): Response
+    public function ajout(EntityManagerInterface $entityManager, Request $request, Censurator $censurator): Response
     {
         $souhait = new Wish();
         $souhait->setDateCreated(new \DateTime());
@@ -56,6 +57,9 @@ class WishController extends AbstractController
         $souhaitForm->handleRequest($request);
 
         if ($souhaitForm->isSubmitted() && $souhaitForm->isValid()) {
+
+            $souhait->setDescription($censurator->purify($souhait->getDescription()));
+
             $entityManager->persist($souhait);
             $entityManager->flush();
 

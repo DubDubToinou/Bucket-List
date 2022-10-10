@@ -1,0 +1,35 @@
+<div class="container">
+    <h1 class="header-logo">
+        <a href="{{ path('main_home') }}" title="retourAccueil">
+            <img src="{{ asset('img/logo.svg') }}" alt="logo bucket list">Bucket-List
+        </a>
+    </h1>
+    <div>
+        {% if app.user %}
+            <h4>Bonjour {{ app.user.userIdentifier }}</h4><br>
+        {% endif %}
+    </div>
+    <nav class="header-nav">
+
+        {% if app.user %}
+
+            <a href="{{ path('main_home') }}" title="retour Accueil">Accueil</a>
+            <a href="{{ path('wish_list') }}" title="Liste des souhaits">Ma liste de souhaits</a>
+            <a href="{{ path('wish_ajout') }}" title="Ajouter un souhait">Ajouter un souhait</a>
+            <a href="{{ path('main_aboutus') }}" title="About Us">A propos</a>
+            <a href="{{ path('app_logout') }}" title="Deconnexion">Deconnexion</a>
+
+            {% if is_granted("ROLE_ADMIN") %}
+                <a href="{{ path('admin_index') }}" title="Dashboard Administrateur">Admin</a>
+            {% endif %}
+
+
+        {% else %}
+            <a href="{{ path('main_home') }}" title="retour Accueil">Accueil</a>
+            <a href="{{ path('app_login') }}" title="Connexion">Connexion</a>
+            <a href="{{ path('app_register') }}" title="Inscription">Inscription</a>
+            <a href="{{ path('main_aboutus') }}" title="About Us">A propos</a>
+
+        {% endif %}
+    </nav>
+</div>
