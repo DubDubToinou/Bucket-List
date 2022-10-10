@@ -52,6 +52,8 @@ class WishController extends AbstractController
     {
         $souhait = new Wish();
         $souhait->setDateCreated(new \DateTime());
+        $utilisateurEnCours = $this->getUser()->getUserIdentifier();
+        $souhait->setAuthor($utilisateurEnCours);
 
         $souhaitForm = $this->createForm(WishType::class, $souhait);
         $souhaitForm->handleRequest($request);
